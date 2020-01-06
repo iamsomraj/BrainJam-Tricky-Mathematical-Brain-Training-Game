@@ -1,4 +1,8 @@
+## <img src="Screenshots\logo.png" style="zoom:25%;" href="https://play.google.com/store/apps/details?id=com.somrajstudio.somrajmukherjee.brainjam"/> BrainJam
+
 # BrainJam Tricky Mathematical Brain Training Game
+
+
 
 BrainJam's challenging and interactive Math Problems helps you to sharpen and train your brain. BrainJam offers different kind of Math puzzles for everyone which tests your accuracy, aptitude and quick-thinking skills. Start exercising your brain now! Don't let your brain jam!
 
