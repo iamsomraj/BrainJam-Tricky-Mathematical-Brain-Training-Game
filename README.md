@@ -1,22 +1,15 @@
 # BrainJam Tricky Mathematical Brain Training Game
+
 BrainJam's challenging and interactive Math Problems helps you to sharpen and train your brain. BrainJam offers different kind of Math puzzles for everyone which tests your accuracy, aptitude and quick-thinking skills. Start exercising your brain now! Don't let your brain jam!
 
 ## Screenshots
 
-| <img src="Screenshots/img1 (1).png"> |
-| :----------------------------------: |
-| <img src="Screenshots/img1 (2).png"> |
-| <img src="Screenshots/img1 (3).png"> |
-| <img src="Screenshots/img1 (4).png"> |
-| <img src="Screenshots/img1 (5).png"> |
-| <img src="Screenshots/img2 (1).png"> |
-| <img src="Screenshots/img2 (2).png"> |
-| <img src="Screenshots/img2 (3).png"> |
-| <img src="Screenshots/img2 (4).png"> |
-| <img src="Screenshots/img2 (5).png"> |
-
-
-
+| <img src="Screenshots/img1 (1).png" style="zoom:25%;"> | <img src="Screenshots/img2 (1).png" style="zoom:25%;"> |
+| :-----------------------------------------------------: | :---------------------------------------------------: |
+| <img src="Screenshots/img1 (2).png" style="zoom:25%;"> | <img src="Screenshots/img2 (2).png" style="zoom:25%;"> |
+| <img src="Screenshots/img1 (3).png" style="zoom:25%;"> | <img src="Screenshots/img2 (3).png" style="zoom:25%;"> |
+| <img src="Screenshots/img1 (4).png" style="zoom:25%;"> | <img src="Screenshots/img2 (4).png" style="zoom:25%;"> |
+| <img src="Screenshots/img1 (5).png" style="zoom:25%;"> | <img src="Screenshots/img2 (5).png" style="zoom:25%;"> |
 
 ## Download Here
 
@@ -32,48 +25,44 @@ It’s easy to get caught up daily activities of life and let your brain go for 
 
 Over 5 levels to challenge core Mathematical abilities, including:
 
-- *Addition based Problems*
-- *Subtraction based Problems*
-- *Addition and Subtraction Combination based Problems*
-- *Higher Order Problems*
-- *Decimal and Multiplicative based Problems*
+- _Addition based Problems_
+- _Subtraction based Problems_
+- _Addition and Subtraction Combination based Problems_
+- _Higher Order Problems_
+- _Decimal and Multiplicative based Problems_
 
 ## Game Modes
 
 Carefully curated 3 modes made for you, including:
 
-- *Easy, Medium and Hard*
-- *Elevate yourself with all the game modes*
+- _Easy, Medium and Hard_
+- _Elevate yourself with all the game modes_
 
 ## Gaming Insights
 
 Detailed statistics about how you play, including:
 
-- *BrainJam analyzes your game play*
-- *Learn your game strengths, weaknesses*
-- *Know your game performance*
-- *Track your previous scores*
-- *Measure your speed and accuracy*
+- _BrainJam analyzes your game play_
+- _Learn your game strengths, weaknesses_
+- _Know your game performance_
+- _Track your previous scores_
+- _Measure your speed and accuracy_
 
 ## Additional Features
 
-- *Share your game score*
+- _Share your game score_
 
-- *Challenge your friends*
+- _Challenge your friends_
 
-- *Send your feedback*
+- _Send your feedback_
 
-  
-
-*<u>Every level is designed to help you improve your skills, memory to sharpen your mind with this addictive game. So, are you ready to take up exciting and challenging Math problems? Download this free app – BrainJam now to get started!</u>*
-
-
+_<u>Every level is designed to help you improve your skills, memory to sharpen your mind with this addictive game. So, are you ready to take up exciting and challenging Math problems? Download this free app – BrainJam now to get started!</u>_
 
 ## Developer
 
 LinkedIn : [iamsomraj](https://www.linkedin.com/in/iamsomraj/)
 
-HackerRank: [iamsomraj](https://www.hackerrank.com/iamsomraj?hr_r=1) 
+HackerRank: [iamsomraj](https://www.hackerrank.com/iamsomraj?hr_r=1)
 
 ## Show Your Support
 
