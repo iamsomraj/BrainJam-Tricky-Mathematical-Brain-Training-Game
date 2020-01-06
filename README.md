@@ -3,17 +3,6 @@ BrainJam's challenging and interactive Math Problems helps you to sharpen and tr
 
 ## Screenshots
 
-| ![](\Screenshots\img1 (1).png) |
-| ----------------------------- |
-| ![](\Screenshots\img1 (2).png) |
-| ![](\Screenshots\img1 (3).png) |
-| ![](\Screenshots\img1 (4).png) |
-| ![](\Screenshots\img1 (5).png) |
-| ![](\Screenshots\img2 (1).png) |
-| ![](\Screenshots\img2 (2).png) |
-| ![](\Screenshots\img2 (3).png) |
-| ![](\Screenshots\img2 (4).png) |
-| ![](\Screenshots\img2 (5).png) |
 
 
 
