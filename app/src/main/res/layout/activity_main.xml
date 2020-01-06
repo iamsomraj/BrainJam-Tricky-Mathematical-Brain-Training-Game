@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackground"
+    android:theme="@style/FontTheme"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:theme="@style/ToolbarFontTheme"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <Button
+            android:id="@+id/gameModeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/roundbutton"
+            android:onClick="changeGameMode"
+            android:padding="10dp"
+            android:text="Game Mode : 10 PT"
+            android:textColor="@color/textColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/backEditUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/roundbutton"
+            android:onClick="closeEditUserName"
+            android:text="Back"
+            android:textColor="@color/textColor"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/enterButton" />
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/userNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:ems="10"
+            android:hint="Enter Username"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/white"
+            android:theme="@style/AlertDialog.AppCompat.Light"
+            android:visibility="invisible"
+            app:layout_constraintBaseline_toBaselineOf="@id/welcomeBackTextView"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="10"
+            app:met_minCharacters="6"
+            />
+
+        <TextView
+            android:id="@+id/welcomeBackTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/sharpbutton"
+            android:gravity="center"
+            android:padding="60dp"
+            android:text="Welcome back, Somraj!"
+            android:textColor="@color/textColor"
+            android:textSize="30sp"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="32dp" />
+
+        <Button
+            android:id="@+id/enterButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/roundbutton"
+            android:onClick="enterFunction"
+            android:padding="15dp"
+            android:text="Enter"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@id/userNameEditText"
+            tools:layout_editor_absoluteX="8dp" />
+
+        <Button
+            android:id="@+id/goButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/gameLayout"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/roundbutton"
+            android:onClick="goFunction"
+            android:padding="20dp"
+            android:text="Go"
+            android:textColor="@color/textColor"
+            android:textSize="30sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/gameModeButton"
+            app:layout_constraintTop_toBottomOf="@id/welcomeBackTextView" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/levelLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp"
+            android:background="@color/windowBackground"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="80dp">
+
+
+            <Button
+                android:id="@+id/backLevelLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/roundbutton"
+                android:onClick="backToWelcomeBack"
+                android:padding="10dp"
+                android:text="Back"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/tutorialLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:background="@color/windowBackground"
+                android:padding="40dp"
+                android:visibility="invisible">
+
+                <Button
+                    android:id="@+id/helpButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/whitebutton"
+                    android:onClick="helpFunction"
+                    android:padding="10dp"
+                    android:text="Still Need Help?"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp"
+                    android:theme="@style/FontTheme"
+                    app:layout_constraintTop_toBottomOf="@+id/helpListView"
+                    tools:layout_editor_absoluteX="40dp" />
+
+                <Button
+                    android:id="@+id/backTutorialButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/roundbutton"
+                    android:onClick="closeTutorial"
+                    android:padding="10dp"
+                    android:text="Back"
+                    android:textColor="@color/textColor"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ListView
+                    android:id="@+id/helpListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="40dp" />
+
+                <TextView
+                    android:id="@+id/showTutorialTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/roundbutton"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Three levels!\n30 seconds time\nin each level!\nSolve as many sums\nas you can! "
+                    android:textColor="@color/textColor"
+                    android:textSize="18sp"
+                    tools:layout_editor_absoluteX="40dp"
+                    tools:layout_editor_absoluteY="40dp" />
+            </android.support.constraint.ConstraintLayout>
+
+            <Button
+                android:id="@+id/howToPlayButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/easy"
+                android:onClick="showTutorial"
+                android:padding="10dp"
+                android:text="Tutorial"
+                android:textColor="@color/textColor"
+                android:textSize="20sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.GridLayout
+                android:id="@+id/gridLevelLayout"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="70dp"
+                android:foregroundGravity="center"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/howToPlayButton">
+
+
+                <Button
+                    android:id="@+id/levelOneButton"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/roundbutton"
+                    android:gravity="center"
+                    android:onClick="startTheGame"
+                    android:padding="10dp"
+                    android:tag="11"
+                    android:text="Level One"
+                    android:textColor="@color/textColor"
+                    android:textSize="20sp"
+                    app:layout_column="0"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    app:layout_row="0"
+                    app:layout_rowWeight="1" />
+
+
+                <Button
+                    android:id="@+id/levelTwoButton"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/roundbutton"
+                    android:gravity="center"
+                    android:onClick="startTheGame"
+                    android:padding="10dp"
+                    android:tag="22"
+                    android:text="Level Two"
+                    android:textColor="@color/textColor"
+                    android:textSize="20sp"
+                    app:layout_column="0"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    app:layout_row="1"
+                    app:layout_rowWeight="1" />
+
+
+                <Button
+                    android:id="@+id/levelThreeButton"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/roundbutton"
+                    android:gravity="center"
+                    android:onClick="startTheGame"
+                    android:padding="10dp"
+                    android:tag="33"
+                    android:text="Level Three"
+                    android:textColor="@color/textColor"
+                    android:textSize="20sp"
+                    app:layout_column="0"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    app:layout_row="3"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    android:id="@+id/levelFourButton"
+                    android:layout_width="wrap_content"
+
+
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/roundbutton"
+                    android:gravity="center"
+                    android:onClick="startTheGame"
+                    android:padding="10dp"
+                    android:tag="44"
+                    android:text="Level Four"
+                    android:textColor="@color/textColor"
+                    android:textSize="20sp"
+                    app:layout_column="0"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    app:layout_row="4"
+                    app:layout_rowWeight="1" />
+
+                <Button
+                    android:id="@+id/levelFiveButton"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/roundbutton"
+                    android:gravity="center"
+                    android:onClick="startTheGame"
+                    android:padding="10dp"
+                    android:tag="55"
+                    android:text="Level Five"
+                    android:textColor="@color/textColor"
+                    android:textSize="20sp"
+                    app:layout_column="0"
+                    app:layout_columnWeight="1"
+                    app:layout_gravity="fill"
+                    app:layout_row="5"
+                    app:layout_rowWeight="1" />
+
+
+            </android.support.v7.widget.GridLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/gameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp"
+            android:text="\t\t\tThree levels!\n\t\t30 seconds time\n\t\t\tin each level!\n\t\tSolve as many sums\n\t\t\tas you can! "
+            android:visibility="invisible"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="5dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/windowBackground">
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/roundbutton"
+                    android:gravity="left"
+                    android:padding="20dp"
+                    android:text="TIME LEFT:"
+                    android:textColor="@color/textColor"
+                    android:textSize="18sp"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/timerTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/roundbutton"
+                    android:gravity="right"
+                    android:padding="20dp"
+                    android:text="30 s"
+                    android:textColor="@color/textColor"
+                    android:textSize="18sp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/sumTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="18dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/roundbutton"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="30 + 12"
+                    android:textColor="@color/textColor"
+                    android:textSize="30sp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/roundbutton"
+                    android:padding="25dp"
+                    android:text="SCORE:"
+                    android:textColor="@color/textColor"
+                    android:textSize="18sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/scoreTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/roundbutton"
+                    android:padding="25dp"
+                    android:text="0/1"
+                    android:textColor="@color/textColor"
+                    android:textSize="18sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <android.support.v7.widget.GridLayout
+                    android:id="@+id/gridLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="18dp"
+                    android:padding="20dp"
+                    android:visibility="visible"
+                    app:columnCount="2"
+                    app:layout_constraintTop_toBottomOf="@+id/sumTextView"
+                    app:rowCount="2"
+                    tools:layout_editor_absoluteX="30dp">
+
+                    <Button
+                        android:id="@+id/button0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/sharpbutton"
+                        android:onClick="selectAnswer"
+                        android:padding="20dp"
+                        android:tag="0"
+                        android:text="Button"
+                        android:textColor="@color/textColor"
+                        android:textSize="24sp"
+                        android:visibility="visible"
+                        app:layout_column="0"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_row="0"
+                        app:layout_rowWeight="1" />
+
+                    <Button
+                        android:id="@+id/button1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/sharpbutton"
+                        android:onClick="selectAnswer"
+                        android:padding="20dp"
+                        android:tag="1"
+                        android:text="Button"
+                        android:textColor="@color/textColor"
+                        android:textSize="24sp"
+                        android:visibility="visible"
+                        app:layout_column="1"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_row="0"
+                        app:layout_rowWeight="1" />
+
+                    <Button
+                        android:id="@+id/button2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/sharpbutton"
+                        android:onClick="selectAnswer"
+                        android:padding="20dp"
+                        android:tag="2"
+                        android:text="Button"
+                        android:textColor="@color/textColor"
+                        android:textSize="24sp"
+                        android:visibility="visible"
+                        app:layout_column="0"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_row="1"
+                        app:layout_rowWeight="1" />
+
+                    <Button
+                        android:id="@+id/button3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/sharpbutton"
+                        android:onClick="selectAnswer"
+                        android:padding="20dp"
+                        android:tag="3"
+                        android:text="Button"
+                        android:textColor="@color/textColor"
+                        android:textSize="24sp"
+                        android:visibility="visible"
+                        app:layout_column="1"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_row="1"
+                        app:layout_rowWeight="1" />
+
+
+                </android.support.v7.widget.GridLayout>
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/finalGameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/windowBackground"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="10dp"
+                tools:layout_editor_absoluteY="10dp">
+
+                <nl.dionsegijn.konfetti.KonfettiView
+                    android:id="@+id/viewKonfetti"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/congratsTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/roundbutton"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="Congratulations!"
+                    android:textColor="@color/textColor"
+                    android:textSize="24sp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/roundbutton"
+                    android:padding="20dp"
+                    android:text="Final Score:"
+                    android:textColor="@color/textColor"
+                    android:textSize="24sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toTopOf="@+id/finalScoreTextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/congratsTextView" />
+
+                <TextView
+                    android:id="@+id/finalScoreTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/roundbutton"
+                    android:padding="15dp"
+                    android:text="0/1"
+                    android:textColor="@color/textColor"
+                    android:textSize="50sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.501"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/levelMenuButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="11dp"
+                    android:layout_marginRight="11dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/roundbutton"
+                    android:onClick="goToMainMenu"
+                    android:padding="20dp"
+                    android:text="Main Menu"
+                    android:textColor="@color/textColor"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/finalButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/hard"
+                    android:onClick="restartGame"
+                    android:padding="20dp"
+                    android:text=" Play Again"
+                    android:textColor="@color/textColor"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/finalScoreTextView" />
+
+                <Button
+                    android:id="@+id/nextLevelButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/medium"
+                    android:onClick="nextLevelFunction"
+                    android:padding="20dp"
+                    android:tag="11"
+                    android:text="Continue!"
+                    android:textColor="@color/textColor"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/finalScoreTextView" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>
