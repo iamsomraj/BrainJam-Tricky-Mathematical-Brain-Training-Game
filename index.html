@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>BrainJam</title><link href='https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext' rel='stylesheet' type='text/css' /><link href='https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+<title>BrainJam</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
 iframe { margin: auto; }
@@ -153,416 +153,239 @@ mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
 
 
-@include-when-export url(https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext);
-@include-when-export url(https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext);
-
-:root {
-	--control-text-color: #777;
+html {
+	font-size: 19px;
 }
 
-/**
- * forked from pixyll.com
- * MIT license
- */
-
-h1,
-.h1,
-.f1 {
-	font-size: 2rem;
-	line-height: 2.5rem;
+html, body {
+	margin: auto;
+	background: #fefefe;
 }
-h2,
-.h2,
-.f2 {
-	font-size: 1.5rem;
-	line-height: 2rem;
-}
-h3,
-.h3,
-.f3 {
-	font-size: 1.25rem;
-	line-height: 1.5rem;
-}
-p,
-.p,
-.f4,
-h4,
-h5,
-h6,
-dl,
-ol,
-ul,
-pre[cid],
-div[cid],
-#typora-source {
-	font-size: 1.125rem;
-	line-height: 1.5rem;
-}
-
-h4 {
-	font-size: 1.13rem;
-}
-/*
- Pixyll
- A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.
- Best served with BASSCSS (http://jxnblk.github.io/basscss)
- Crafted with <3 by John Otander (@4lpine) - ©2015 John Otander MIT License http://opensource.org/licenses/MIT
-
-*/
-
 body {
-	font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", Serif;
-	line-height: 1.5rem;
-	font-weight: 400;
-}
-
-#write {
-	max-width: 914px;
+	font-family: "Vollkorn", Palatino, Times;
 	color: #333;
+	line-height: 1.4;
+	text-align: justify;
 }
-
-img {
-	width: auto;
-	max-width: 100%;
-}
-body {
-	font-size: 1.5rem;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-
-.ty-table-edit {
-	background: #ededed;
-}
-
-table {
-	width: 100%;
-	font-size: 1.125rem;
-}
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td,
-table > tfoot > tr > th,
-table > tfoot > tr > td {
-	padding: 12px;
-	line-height: 1.2;
-	vertical-align: top;
-	border-top: 1px solid #333;
-}
-table > thead > tr > th {
-	vertical-align: bottom;
-	border-bottom: 2px solid #333;
-}
-table > caption + thead > tr:first-child > th,
-table > caption + thead > tr:first-child > td,
-table > colgroup + thead > tr:first-child > th,
-table > colgroup + thead > tr:first-child > td,
-table > thead:first-child > tr:first-child > th,
-table > thead:first-child > tr:first-child > td {
-	border-top: 0;
-}
-table > tbody + tbody {
-	border-top: 2px solid #333;
-}
-p {
-	font-weight: 300;
-	line-height: 1.5;
-}
-abbr {
-	border-bottom: 1px black dotted;
-	cursor: help;
-}
-pre,
-code {
-	font-family: Menlo, Monaco, "Courier New", monospace;
-}
-
-code,
-.md-fences  {
-	color: #7a7a7a;
-}
-
-.md-fences {
-	padding: 1.125em;
-	margin-bottom: 0.88em;
-	font-size: 1rem;
-	border: 1px solid #7a7a7a;
-	padding-bottom: 0.5rem;
-	padding-top: 0.5rem;
-}
-
-blockquote {
-	padding: 1.33em;
-	font-style: italic;
-	border-left: 5px solid #7a7a7a;
-	color: #555;
-}
-blockquote em {
-	color: #000;
-}
-blockquote footer {
-	font-size: .85rem;
-	font-style: normal;
-	background-color: #fff;
-	color: #7a7a7a;
-	border-color: transparent;
-}
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-	font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
-	font-weight: bold;
-	line-height: 1.2;
-	margin: 1em 0 0.5em;
-}
-@media screen and (min-width: 48em) {
-	.h1,
-	h1 {
-		font-size: 3.250rem;
-	}
-	.h2,
-	h2 {
-		font-size: 2.298rem;
-	}
-	.h3,
-	h3 {
-		font-size: 1.625rem;
-	}
-	.h4,
-	h4 {
-		font-size: 1.3rem;
-	}
-	#write>h4.md-focus:before,
-	#write>h5.md-focus:before,
-	#write>h6.md-focus:before{
-		top: 1px;
-	}
-	.p,
-	p,
-	li {
-		font-size: 1.25rem;
-		line-height: 1.8;
-	}
-	table {
-		font-size: 1.25rem;
-	}
-}
-@media (max-width: 48em) {
-	blockquote {
-		margin-left: 1rem;
-		margin-right: 0;
-		padding: 0.5em;
-	}
-	.h1,
-	h1 {
-		font-size: 2.827rem;
-	}
-	.h2,
-	h2 {
-		font-size: 1.999rem;
-	}
-	.h3,
-	h3 {
-		font-size: 1.413rem;
-	}
-	.h4,
-	h4 {
-		font-size: 1.3rem;
-	}
-}
-@media screen and (min-width: 64em) {
-	.h1,
-	h1 {
-		font-size: 4.498rem;
-	}
-	.h2,
-	h2 {
-		font-size: 2.29rem;
-	}
-	.h3,
-	h3 {
-		font-size: 1.9rem;
-	}
-	.h4,
-	h4 {
-		font-size: 1.591rem;
-	}
-	#write>h4.md-focus:before{
-		top:4px;
-	}
-}
-a {
-	color: #463F5C;
-	text-decoration: underline;
-}
-
 #write {
-	padding-top: 2rem;
-}
-
-#write pre.md-meta-block {
-	min-height: 35px;
-	padding: 0.5em 1em;
-	white-space: pre;
-	border: 0px;
-
-	border-left: 30px #f8f8f8 solid;
-	border-right: 30px #f8f8f8 solid;
-	width: 100vw;
-	max-width: calc(100% + 60px);
-
-	margin-left: -30px;
+	max-width: 960px;
+	margin: 0 auto;
 	margin-bottom: 2em;
-	margin-top: -2010px;
-	padding-top: 2000px;
-	padding-bottom: 10px;
-	line-height: 1.5em;
-	color: #7a7a7a;
-	background-color: #fafafa;
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
-	font-weight: 300;
-	clear: both;
-	padding-left: 0;
-	font-size:1.125rem;
+	line-height: 1.53;
+	padding-top: 40px;
 }
-.md-image>.md-meta {
-	color: #463F5C
+
+/* Typography
+-------------------------------------------------------- */
+
+#write>h1:first-child,
+h1 {
+	margin-top: 1.6em;
+	font-weight: normal;
 }
-.footnotes {
-	font-size:1.1rem;
+
+h1 {
+	font-size:3em;
 }
-.md-tag {
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+
+h2 {
+	margin-top:2em;
+	font-weight: normal;
 }
-.code-tooltip {
+
+h3 {
+	font-weight: normal;
+	font-style: italic;
+	margin-top: 3em;
+}
+
+h1, 
+h2, 
+h3{
+	text-align: center;
+}
+
+h2:after{
+	border-bottom: 1px solid #2f2f2f;
+    content: '';
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+    height: 1px;
+}
+
+h1+h2, h2+h3 {
+	margin-top: 0.83em;
+}
+
+p,
+.mathjax-block {
+	margin-top: 0;
+	-webkit-hypens: auto;
+	-moz-hypens: auto;
+	hyphens: auto;
+}
+ul {
+	list-style: square;
+	padding-left: 1.2em;
+}
+ol {
+	padding-left: 1.2em;
+}
+blockquote {
+	margin-left: 1em;
+	padding-left: 1em;
+	border-left: 1px solid #ddd;
+}
+code,
+pre {
+	font-family: "Consolas", "Menlo", "Monaco", monospace, serif;
+	font-size: .9em;
 	background: white;
 }
-.code-tooltip-content {
-	font-size: 1.1rem;
+.md-fences{
+	margin-left: 1em;
+	padding-left: 1em;
+	border: 1px solid #ddd;
+	padding-bottom: 8px;
+	padding-top: 6px;
+	margin-bottom: 1.5em;
+}
+
+a {
+	color: #2484c1;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a img {
+	border: none;
+}
+h1 a,
+h1 a:hover {
+	color: #333;
+	text-decoration: none;
+}
+hr {
+	color: #ddd;
+	height: 1px;
+	margin: 2em 0;
+	border-top: solid 1px #ddd;
+	border-bottom: none;
+	border-left: 0;
+	border-right: 0;
+}
+.ty-table-edit {
+	background: #ededed;
+    padding-top: 4px;
+}
+table {
+	margin-bottom: 1.333333rem
+}
+table th,
+table td {
+	padding: 8px;
+	line-height: 1.333333rem;
+	vertical-align: top;
+	border-top: 1px solid #ddd
+}
+table th {
+	font-weight: bold
+}
+table thead th {
+	vertical-align: bottom
+}
+table caption+thead tr:first-child th,
+table caption+thead tr:first-child td,
+table colgroup+thead tr:first-child th,
+table colgroup+thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+	border-top: 0
+}
+table tbody+tbody {
+	border-top: 2px solid #ddd
 }
 
 .task-list{
-	padding-left: 0;
+	padding:0;
 }
 
 .md-task-list-item {
-	padding-left:34px;
+	padding-left: 1.6rem;
 }
 
-.md-task-list-item > input{
-	width: 1.25rem;
-	height: 1.25rem;
-	display: block;
-	-webkit-appearance: initial;
-	top: -0.2rem;
-	margin-left: -1.6em;
-	margin-top: calc(1rem - 7px);
-	border: none;
-}
-
-.md-task-list-item > input:focus{
-	outline: none;
-	box-shadow: none;
-}
-
-.md-task-list-item > input:before{
-	border: 1px solid #555;
-	border-radius: 1.5rem;
-	width: 1.5rem;
-	height: 1.5rem;
-	background: #fff;
-	content: ' ';
-	transition: background-color 200ms ease-in-out;
-	display: block;
+.md-task-list-item > input:before {
+	content: '\221A';
+	display: inline-block;
+	width: 1.33333333rem;
+  	height: 1.6rem;
+	vertical-align: middle;
+	text-align: center;
+	color: #ddd;
+	background-color: #fefefe;
 }
 
 .md-task-list-item > input:checked:before,
 .md-task-list-item > input[checked]:before{
-	background: #333;
-	border-width: 2px;
-	display:inline-block;
-	transition: background-color 200ms ease-in-out;
+	color: inherit;
 }
-
-.md-task-list-item > input:checked:after,
-.md-task-list-item > input[checked]:after {
-	opacity: 1;
-}
-
-.md-task-list-item > input:after {
-	opacity: 1;
-	-webkit-transition: opacity 0.05s ease-in-out;
-	-moz-transition: opacity 0.05s ease-in-out;
-	transition: opacity 0.05s ease-in-out;
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-	position: absolute;
-	top: 0.4375rem;
-	left: 0.28125rem;
-	width: 0.9375rem;
-	height: 0.5rem;
-	border: 3px solid #fff;
-	border-top: 0;
-	border-right: 0;
-	content: ' ';
-	opacity: 0;
-}
-
 .md-tag {
-	color:inherit;
+	color: inherit;
+	font: inherit;
+}
+#write pre.md-meta-block {
+	min-height: 35px;
+	padding: 0.5em 1em;
+}
+#write pre.md-meta-block {
+	white-space: pre;
+	background: #f8f8f8;
+	border: 0px;
+	color: #999;
+	
+	width: 100vw;
+	max-width: calc(100% + 60px);
+	margin-left: -30px;
+	border-left: 30px #f8f8f8 solid;
+	border-right: 30px #f8f8f8 solid;
+
+	margin-bottom: 2em;
+	margin-top: -1.3333333333333rem;
+	padding-top: 26px;
+	padding-bottom: 10px;
+	line-height: 1.8em;
+	font-size: 0.9em;
+	font-size: 0.76em;
+	padding-left: 0;
+}
+.md-img-error.md-image>.md-meta{
+	vertical-align: bottom;
+}
+#write>h5.md-focus:before {
+	top: 2px;
 }
 
-.md-toc:focus .md-toc-content{
-	margin-top: 19px;
+.md-toc {
+	margin-top: 40px;
 }
 
-#typora-sidebar {
-	font-size:1rem !important;
-}
-
-.html-for-mac #typora-sidebar {
-	background-color:white;
-}
-
-.outline-content li, .outline-content ul {
-	font-size:1rem !important;
-}
-
-.outline-title {
-	line-height: inherit;
-	margin-top: 10px;
-}
-
-.outline-expander {
-	width: 18px;
+.md-toc-content {
+	padding-bottom: 20px;
 }
 
 .outline-expander:before {
- 	content: "+";
-	font-family: inherit;
-	color: rgb(108, 108, 108); 
-  	font-size: 1.5rem;
- 	top: 0.1rem;
+	color: inherit;
+	font-size: 14px;
+	top: auto;
+	content: "\f0da";
+	font-family: FontAwesome;
 }
 
-.outline-expander:hover:before {
-	content: "+";
-}
-
-.outline-item-open>.outline-item>.outline-expander:before{
-	content: "-";
+.outline-expander:hover:before,
+.outline-item-open>.outline-item>.outline-expander:before {
+  	content: "\f0d7";
 }
 
 /** source code mode */
@@ -571,8 +394,9 @@ a {
     color: #6A6A6A;
 }
 
-.os-windows #typora-source {
-	font-family: inherit;
+.html-for-mac #typora-sidebar {
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
 }
 
 .cm-s-typora-default .cm-header, 
@@ -585,19 +409,23 @@ a {
 	color: #777777;
 }
 
-.md-diagram-panel {
-	margin-top: 24px;
-	margin-left: -1.2em;
+.typora-node .file-list-item-parent-loc, 
+.typora-node .file-list-item-time, 
+.typora-node .file-list-item-summary {
+	font-family: arial, sans-serif;
+}
+
+.md-task-list-item>input {
+    margin-left: -1.3em;
+    margin-top: calc(1rem - 12px);
 }
 
 .md-mathjax-midline {
 	background: #fafafa;
 }
 
-.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
-.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
-.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
-    bottom: -3.4em;
+.md-fences .code-tooltip {
+	bottom: -2em !important;
 }
 
 .dropdown-menu .divider {
@@ -608,6 +436,6 @@ a {
 </style>
 </head>
 <body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node'><h2><a name="img-srcscreenshotslogopng-stylezoom25-hrefhttpsplaygooglecomstoreappsdetailsidcomsomrajstudiosomrajmukherjeebrainjam-brainjam" class="md-header-anchor"></a><img src="Screenshots\logo.png" style="zoom:25%;" href="https://play.google.com/store/apps/details?id=com.somrajstudio.somrajmukherjee.brainjam"/><span> BrainJam</span></h2><h1><a name="brainjam-tricky-mathematical-brain-training-game" class="md-header-anchor"></a><span>BrainJam Tricky Mathematical Brain Training Game</span></h1><p>&nbsp;</p><p><span>BrainJam&#39;s challenging and interactive Math Problems helps you to sharpen and train your brain. BrainJam offers different kind of Math puzzles for everyone which tests your accuracy, aptitude and quick-thinking skills. Start exercising your brain now! Don&#39;t let your brain jam!</span></p><h1><a name="screenshots" class="md-header-anchor"></a><span>Screenshots</span></h1><figure><table><thead><tr><th style='text-align:center;' ><img src="Screenshots/img1 (1).png" style="zoom:25%;"></th><th style='text-align:center;' ><img src="Screenshots/img2 (1).png" style="zoom:25%;"></th></tr></thead><tbody><tr><td style='text-align:center;' ><img src="Screenshots/img1 (2).png" style="zoom:25%;"></td><td style='text-align:center;' ><img src="Screenshots/img2 (2).png" style="zoom:25%;"></td></tr><tr><td style='text-align:center;' ><img src="Screenshots/img1 (3).png" style="zoom:25%;"></td><td style='text-align:center;' ><img src="Screenshots/img2 (3).png" style="zoom:25%;"></td></tr><tr><td style='text-align:center;' ><img src="Screenshots/img1 (4).png" style="zoom:25%;"></td><td style='text-align:center;' ><img src="Screenshots/img2 (4).png" style="zoom:25%;"></td></tr><tr><td style='text-align:center;' ><img src="Screenshots/img1 (5).png" style="zoom:25%;"></td><td style='text-align:center;' ><img src="Screenshots/img2 (5).png" style="zoom:25%;"></td></tr></tbody></table></figure><h1><a name="download-here" class="md-header-anchor"></a><span>Download Here</span></h1><p><a href='https://play.google.com/store/apps/details?id=com.somrajstudio.somrajmukherjee.brainjam'><span>Download</span></a><span> from here.</span></p><h1><a name="usage" class="md-header-anchor"></a><span>Usage</span></h1><p><span>It’s easy to get caught up daily activities of life and let your brain go for a pause. BrainJam challenges your grey matter across a variety of segments – problem solving, reflexes, speed and accuracy. The levels are quick and simple, but require immense focus to complete within the prescribed time.</span></p><p><strong><span>With BrainJam, you will work out with a simple tutorial, unlock in-depth insights about how you play and score, increase your performance for better game accuracy, speed and strategy.</span></strong></p><h1><a name="features" class="md-header-anchor"></a><span>Features</span></h1><p><span>Over 5 levels to challenge core Mathematical abilities, including:</span></p><ul><li><em><span>Addition based Problems</span></em></li><li><em><span>Subtraction based Problems</span></em></li><li><em><span>Addition and Subtraction Combination based Problems</span></em></li><li><em><span>Higher Order Problems</span></em></li><li><em><span>Decimal and Multiplicative based Problems</span></em></li></ul><h1><a name="game-modes" class="md-header-anchor"></a><span>Game Modes</span></h1><p><span>Carefully curated 3 modes made for you, including:</span></p><ul><li><em><span>Easy, Medium and Hard</span></em></li><li><em><span>Elevate yourself with all the game modes</span></em></li></ul><h1><a name="gaming-insights" class="md-header-anchor"></a><span>Gaming Insights</span></h1><p><span>Detailed statistics about how you play, including:</span></p><ul><li><em><span>BrainJam analyzes your game play</span></em></li><li><em><span>Learn your game strengths, weaknesses</span></em></li><li><em><span>Know your game performance</span></em></li><li><em><span>Track your previous scores</span></em></li><li><em><span>Measure your speed and accuracy</span></em></li></ul><h1><a name="additional-features" class="md-header-anchor"></a><span>Additional Features</span></h1><ul><li><em><span>Share your game score</span></em></li><li><em><span>Challenge your friends</span></em></li><li><em><span>Send your feedback</span></em></li></ul><p><em><u><span>Every level is designed to help you improve your skills, memory to sharpen your mind with this addictive game. So, are you ready to take up exciting and challenging Math problems? Download this free app – BrainJam now to get started!</span></u></em></p><h1><a name="developer" class="md-header-anchor"></a><span>Developer</span></h1><p><span>LinkedIn : </span><a href='https://www.linkedin.com/in/iamsomraj/'><span>iamsomraj</span></a></p><p><span>HackerRank: </span><a href='https://www.hackerrank.com/iamsomraj?hr_r=1'><span>iamsomraj</span></a></p><p><span>Email: </span><a href='mailto:iamsomraj@gmail.com'><span>iamsomraj</span></a></p><h1><a name="show-your-support" class="md-header-anchor"></a><span>Show Your Support</span></h1><p><span>Give me a star if this project helped you</span></p><h1><a name="contributing" class="md-header-anchor"></a><span>Contributing</span></h1><p><span>Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.</span></p><p><span>Please make sure to update tests as appropriate.</span></p><h1><a name="license" class="md-header-anchor"></a><span>License</span></h1><p><a href='https://choosealicense.com/licenses/mit/'><span>MIT</span></a></p></div>
+<div  id='write'  class = 'is-node'><h2><a name="img-srcscreenshotslogopng-stylezoom25-hrefhttpsplaygooglecomstoreappsdetailsidcomsomrajstudiosomrajmukherjeebrainjam-brainjam" class="md-header-anchor"></a><img src="Screenshots\logo.png" style="zoom:25%;" href="https://play.google.com/store/apps/details?id=com.somrajstudio.somrajmukherjee.brainjam"/><span> BrainJam</span></h2><h1><a name="brainjam-tricky-mathematical-brain-training-game" class="md-header-anchor"></a><span>BrainJam Tricky Mathematical Brain Training Game</span></h1><p>&nbsp;</p><p><span>BrainJam&#39;s challenging and interactive Math Problems helps you to sharpen and train your brain. BrainJam offers different kind of Math puzzles for everyone which tests your accuracy, aptitude and quick-thinking skills. Start exercising your brain now! Don&#39;t let your brain jam!</span></p><h1><a name="screenshots" class="md-header-anchor"></a><span>Screenshots</span></h1><figure><table><thead><tr><th style='text-align:center;' ><img src="Screenshots/img1 (1).png" style="zoom:25%;"></th><th style='text-align:center;' ><img src="Screenshots/img2 (1).png" style="zoom:25%;"></th></tr></thead><tbody><tr><td style='text-align:center;' ><img src="Screenshots/img1 (2).png" style="zoom:25%;"></td><td style='text-align:center;' ><img src="Screenshots/img2 (2).png" style="zoom:25%;"></td></tr><tr><td style='text-align:center;' ><img src="Screenshots/img1 (3).png" style="zoom:25%;"></td><td style='text-align:center;' ><img src="Screenshots/img2 (3).png" style="zoom:25%;"></td></tr><tr><td style='text-align:center;' ><img src="Screenshots/img1 (4).png" style="zoom:25%;"></td><td style='text-align:center;' ><img src="Screenshots/img2 (4).png" style="zoom:25%;"></td></tr><tr><td style='text-align:center;' ><img src="Screenshots/img1 (5).png" style="zoom:25%;"></td><td style='text-align:center;' ><img src="Screenshots/img2 (5).png" style="zoom:25%;"></td></tr></tbody></table></figure><h1><a name="download-here" class="md-header-anchor"></a><span>Download Here</span></h1><p><a href='https://play.google.com/store/apps/details?id=com.somrajstudio.somrajmukherjee.brainjam'><span>Download</span></a><span> from here.</span></p><h1><a name="usage" class="md-header-anchor"></a><span>Usage</span></h1><p><span>It’s easy to get caught up daily activities of life and let your brain go for a pause. BrainJam challenges your grey matter across a variety of segments – problem solving, reflexes, speed and accuracy. The levels are quick and simple, but require immense focus to complete within the prescribed time.</span></p><p><strong><span>With BrainJam, you will work out with a simple tutorial, unlock in-depth insights about how you play and score, increase your performance for better game accuracy, speed and strategy.</span></strong></p><h1><a name="features" class="md-header-anchor"></a><span>Features</span></h1><p><span>Over 5 levels to challenge core Mathematical abilities, including:</span></p><ul><li><em><span>Addition based Problems</span></em></li><li><em><span>Subtraction based Problems</span></em></li><li><em><span>Addition and Subtraction Combination based Problems</span></em></li><li><em><span>Higher Order Problems</span></em></li><li><em><span>Decimal and Multiplicative based Problems</span></em></li></ul><h1><a name="game-modes" class="md-header-anchor"></a><span>Game Modes</span></h1><p><span>Carefully curated 3 modes made for you, including:</span></p><ul><li><em><span>Easy, Medium and Hard</span></em></li><li><em><span>Elevate yourself with all the game modes</span></em></li></ul><h1><a name="gaming-insights" class="md-header-anchor"></a><span>Gaming Insights</span></h1><p><span>Detailed statistics about how you play, including:</span></p><ul><li><em><span>BrainJam analyzes your game play</span></em></li><li><em><span>Learn your game strengths, weaknesses</span></em></li><li><em><span>Know your game performance</span></em></li><li><em><span>Track your previous scores</span></em></li><li><em><span>Measure your speed and accuracy</span></em></li></ul><h1><a name="additional-features" class="md-header-anchor"></a><span>Additional Features</span></h1><ul><li><em><span>Share your game score</span></em></li><li><em><span>Challenge your friends</span></em></li><li><em><span>Send your feedback</span></em></li></ul><p>&nbsp;</p><p>&nbsp;</p><h3><a name="every-level-is-designed-to-help-you-improve-your-skills-memory-to-sharpen-your-mind-with-this-addictive-game-so-are-you-ready-to-take-up-exciting-and-challenging-math-problems-download-this-free-app----brainjam-now-to-get-started" class="md-header-anchor"></a><strong><em><span>Every level is designed to help you improve your skills, memory to sharpen your mind with this addictive game. So, are you ready to take up exciting and challenging Math problems? Download this free app – BrainJam now to get started!</span></em></strong></h3><h1><a name="developer" class="md-header-anchor"></a><span>Developer</span></h1><p><span>LinkedIn : </span><a href='https://www.linkedin.com/in/iamsomraj/'><span>iamsomraj</span></a></p><p><span>HackerRank: </span><a href='https://www.hackerrank.com/iamsomraj?hr_r=1'><span>iamsomraj</span></a></p><p><span>Email: </span><a href='mailto:iamsomraj@gmail.com'><span>iamsomraj</span></a></p><h1><a name="show-your-support" class="md-header-anchor"></a><span>Show Your Support</span></h1><p><span>Give me a star if this project helped you</span></p><h1><a name="contributing" class="md-header-anchor"></a><span>Contributing</span></h1><p><span>Suggestions are welcome. For major changes, please send an email first to discuss what you would like to change.</span></p></div>
 </body>
 </html>

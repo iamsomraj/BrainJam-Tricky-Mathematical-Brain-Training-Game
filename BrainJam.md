@@ -55,12 +55,14 @@ Detailed statistics about how you play, including:
 # Additional Features
 
 - _Share your game score_
-
 - _Challenge your friends_
-
 - _Send your feedback_
 
-_<u>Every level is designed to help you improve your skills, memory to sharpen your mind with this addictive game. So, are you ready to take up exciting and challenging Math problems? Download this free app – BrainJam now to get started!</u>_
+
+
+
+
+### ***Every level is designed to help you improve your skills, memory to sharpen your mind with this addictive game. So, are you ready to take up exciting and challenging Math problems? Download this free app – BrainJam now to get started!***
 
 # Developer
 
@@ -76,10 +78,4 @@ Give me a star if this project helped you
 
 # Contributing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-# License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+Suggestions are welcome. For major changes, please send an email first to discuss what you would like to change.
